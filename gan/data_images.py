@@ -159,9 +159,9 @@ def load_real_data(rect_dims: tuple, image_dims: tuple, data_type: str):
         b = h
         h = b
     if data_type == "MAX_SNAKES":
-        snakes = np.load(f"../data/npy/snake_{b}x{h}.npy", allow_pickle=True)
+        snakes = np.load(f"data/npy/snake_{b}x{h}.npy", allow_pickle=True)
     elif data_type == "MAX_FOREST":
-        snakes = np.load(f"../data/npy/snake_forest_{b}x{h}.npy", allow_pickle=True)
+        snakes = np.load(f"data/npy/snake_forest_{b}x{h}.npy", allow_pickle=True)
     else:
         raise ValueError("Invalid data_type argument")
 

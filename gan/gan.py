@@ -7,9 +7,10 @@ import numpy.random
 import tensorflow as tf
 from tensorflow.keras import layers, Model
 
-import data_images
-import gan_excel
+from gan import data_images, gan_excel
 from utils import file_management
+
+EPOCHS = 2000
 
 MIN_RECT_DIMS = (4, 4)
 MAX_RECT_DIMS = (4, 16)
@@ -28,7 +29,7 @@ SEMANTIC_BATCH_SIZE = 4
 # 0: No semantic loss;
 # 1: Comparison between real and guessed rectangle dimensions;
 # 2: Proportion of each cell that is not the dominant color.
-SEMANTIC_LOSS_VERSION = 2
+SEMANTIC_LOSS_VERSION = 0
 
 
 def make_generator_model():
@@ -68,8 +69,7 @@ def make_generator_model():
     x = layers.LeakyReLU()(x)
 
     output = layers.Conv2DTranspose(256, (5, 5), strides=(1, 1), padding='same', use_bias=False,
-                                    activation='softmax')(
-        x)
+                                    activation='softmax')(x)
 
     if GENERATOR_TYPE == 0:
         return Model(inputs=input_noise, outputs=output)
@@ -166,7 +166,7 @@ class GAN:
                   'BATCH_SIZE': BATCH_SIZE,
                   'SEMANTIC_BATCH_SIZE': SEMANTIC_BATCH_SIZE}
 
-        config_file_path = 'configs.json'
+        config_file_path = 'gan/configs.json'
         self.config_number = None
         with open(config_file_path) as json_file:
             configs = json.load(json_file)
@@ -182,7 +182,7 @@ class GAN:
         else:
             print(f'Current config number is {self.config_number}')
 
-        self.model_dir = f'trained/{self.config_number}/gen{GENERATOR_TYPE}_sem{SEMANTIC_LOSS_VERSION}'
+        self.model_dir = f'gan/trained/{self.config_number}/gen{GENERATOR_TYPE}_sem{SEMANTIC_LOSS_VERSION}'
         if os.path.exists(self.model_dir) is False:
             os.makedirs(f'{self.model_dir}/validation')
             os.makedirs(f'{self.model_dir}/checkpoints')
@@ -219,7 +219,7 @@ class GAN:
     def test(self, rect_dims):
         file_management.empty_directory(f'{self.model_dir}/test/')
         b, h = rect_dims
-        real_snakes = np.load(f"../data/npy/snake_{b}x{h}.npy", allow_pickle=True)
+        real_snakes = np.load(f'data/npy/snake_{b}x{h}.npy', allow_pickle=True)
 
         success = 0
         number_of_test = 100
@@ -325,7 +325,7 @@ class GAN:
             fake_snake_bh = data_images.image_to_snake(img, (b, h))
             fake_snake_hb = data_images.image_to_snake(img, (h, b))
 
-            real_snakes = np.load(f"../data/npy/snake_{dims[0]}x{dims[1]}.npy", allow_pickle=True)
+            real_snakes = np.load(f"data/npy/snake_{dims[0]}x{dims[1]}.npy", allow_pickle=True)
             saved = False
             for real_snake in real_snakes:
                 if b > h:
@@ -344,11 +344,11 @@ class GAN:
         return validation_rate
 
 
-if __name__ == '__main__':
-    EPOCHS = 2000
+def main():
     squares_only = False
     if squares_only:
-        train_dataset = data_images.load_square_dims_data(MIN_RECT_DIMS[0], MAX_RECT_DIMS[0], IMAGE_DIMS, "MAX_SNAKES")
+        train_dataset = data_images.load_square_dims_data(MIN_RECT_DIMS[0], MAX_RECT_DIMS[0], IMAGE_DIMS,
+                                                          "MAX_SNAKES")
     else:
         train_dataset = data_images.load_varied_dims_data(MIN_RECT_DIMS, MAX_RECT_DIMS, IMAGE_DIMS, "MAX_SNAKES")
 
@@ -370,3 +370,7 @@ if __name__ == '__main__':
     # TEST IF GENERATOR GOES BEYOND TRAINING DIMS
     # gan.restore()
     # gan.test((4, 20))
+
+
+if __name__ == '__main__':
+    main()
