@@ -1,0 +1,326 @@
+{
+  "0": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "1": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 100,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "2": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": true,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "3": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      40
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "4": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 32
+  },
+  "5": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": true,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 32
+  },
+  "6": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": true,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 16
+  },
+  "7": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 16
+  },
+  "8": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 8
+  },
+  "9": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": true,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 0,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 8
+  },
+  "10": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": true,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 1000,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "11": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 1000,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "12": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      40
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 1000,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "13": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      4,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      40
+    ],
+    "NOISE_AS_RECT": true,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 1000,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "14": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      7,
+      13
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 500,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "15": {
+    "MIN_RECT_DIMS": [
+      4,
+      4
+    ],
+    "MAX_RECT_DIMS": [
+      7,
+      13
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": true,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 500,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "16": {
+    "MIN_RECT_DIMS": [
+      3,
+      3
+    ],
+    "MAX_RECT_DIMS": [
+      3,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 1000,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  },
+  "17": {
+    "MIN_RECT_DIMS": [
+      5,
+      5
+    ],
+    "MAX_RECT_DIMS": [
+      5,
+      16
+    ],
+    "IMAGE_DIMS": [
+      16,
+      20
+    ],
+    "NOISE_AS_RECT": false,
+    "MINIMUM_SAMPLE_SIZE_FOR_EACH_DIMENSIONS": 1000,
+    "BATCH_SIZE": 32,
+    "SEMANTIC_BATCH_SIZE": 4
+  }
+}
